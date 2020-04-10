@@ -1,0 +1,81 @@
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
+<div class="about">
+    <div class="basicInfo">
+        <div class="quesans">
+            <p>What is My Name ? <a id="nameans"><i class="fa fa-chevron-down"></i></a></p>
+            <p id="urname">Avinash Varpeti</p>
+        </div>
+
+        <div class="quesans">
+            <p>What am I persuing ?<a id="studyans"><i class="fa fa-chevron-down"></i></a></p>
+            <p id="urstudy">Engineering(IT) 3rd Year</p>
+        </div>
+
+        <div class="quesans">
+            <p>What Service I can Provide ?<a id="serviceans"><i class="fa fa-chevron-down"></i></a></p>
+            <p id="urservice">Website and Webapps Development</p>
+        </div>
+
+        <div class="quesans">
+            <p>What Can I Teach ?<a id="teachans"><i class="fa fa-chevron-down"></i></a></p>
+            <p id="urteach">Programming Languages , Data Structures and Algorithms</p>
+        </div>
+    </div>
+
+    <div class="Programming">
+        <p>c++</p>
+        <div class="skillBar" >
+            <div class="progress" style="width: 89%;"></div>
+        </div>
+        <p>Python</p>
+        <div class="skillBar" >
+            <div class="progress" style="width: 84%;"></div>
+        </div>
+        <p>Java</p>
+        <div class="skillBar">
+            <div class="progress"  style="width: 80%;"></div>
+        </div>
+        <p>Css</p>
+        <div class="skillBar" >
+            <div class="progress" style="width: 80%;"></div>
+        </div>
+        <p>Javascript</p>
+        <div class="skillBar">
+            <div class="progress" style="width: 70%;"></div>
+        </div>
+    </div>
+</div>
+
+<div class="aboutMe">
+    <h2 style="color: rgb(230, 66, 38);">About.Me</h2>
+    <p style="color: rgb(107, 2, 107);">I am very Passionate About Writing Code and Thats Why I Learned 3 Languages Which are Mostly Highly Rated as Per Industry Standards.<p> Languages I Know are Python, Java and C++.</p><p> I Use These Languages For Different Purpose. I like to use C++ while I do problem solving or in case of Competative Programming.</p>
+    <p style="color: rgb(3, 134, 60);">I started learning java because I can Deep dive into OOP concepts in it. I use Python as Backend For Web Development(Django)</p>
+</div>
+
+
+
+<script>
+   $("#nameans").click(function(){
+
+    $('#urname').toggle();
+});
+
+$("#serviceans").click(function(){
+
+$('#urservice').toggle();
+});
+
+$("#studyans").click(function(){
+
+$('#urstudy').toggle();
+});
+
+$("#teachans").click(function(){
+
+$('#urteach').toggle();
+});
+</script>
+
+{% endblock content %}

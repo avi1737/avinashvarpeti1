@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <title>Base Page</title>
+    <link rel="stylesheet" href="{% static 'portfolio.css' %}">
+    <script
+			  src="https://code.jquery.com/jquery-3.4.1.js"
+			  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+			  crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logoName"><a href="{% url 'home' %}">Avinash.Varpeti.</a></div>
+        <span class="navbar-toggle">
+            <i class="fa fa-bars fa-3x" aria-hidden="true"  id="js-navbar-toggle"></i>
+            <i class="fa fa-close" id="js-close"></i>
+        </span>
+        <div class="navRight" id="nav-ul">
+            <ul >
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'work' %}">Work</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+                
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+
+    {% block content %}
+
+    {% endblock content %}
+
+    
+     </div>
+    <script>
+
+        var nav = document.getElementById('nav-ul');
+
+        var navbar = document.getElementsByClassName("navbar");
+
+        var Btn = document.getElementById('js-navbar-toggle');
+
+        var closeBtn = document.getElementById("js-close");
+
+        Btn.addEventListener('click',()=>{
+            nav.style.display = "flex";
+            closeBtn.style.display="block";
+            Btn.style.display='none';
+        });
+
+        closeBtn.addEventListener('click',()=>{
+            nav.style.display = "none";
+            closeBtn.style.display="none";
+            Btn.style.display='block';
+        });
+
+
+    
+    $('#lightMode').click(function(){
+        $('body').css('background-color','white');
+        $("ul li a").css('color','black');
+        $('.logoName a').css('color','black');
+    });
+    </script>
+</body>
+</html>

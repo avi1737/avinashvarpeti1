@@ -1,0 +1,26 @@
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
+
+<div class="social-media">
+    <h1>Connent Through Social media</h1>
+    <a href="https://www.instagram.com/_mu_allem_/" target="_blank"><i class="fa fa-instagram fa-3x"></i></a>
+    <a href="https://www.facebook.com/avinash.varpeti" target="_blank"><i class="fa fa-facebook-square fa-3x"></i></a>
+    <a href="https://www.linkedin.com/in/avinash-varpeti-4300b4172/" target="_blank"><i class="fa fa-linkedin fa-3x"></i></a>
+</div>
+
+<div class="contact-container">
+    <h2>Get In Touch</h2>
+    <p>If you have any Query or Projects to Discuss with me then please send.</p>
+    <div class="form-container">
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button id="sendBtn">Send</button>
+    </form>
+    <p>{{ msg }}</p>
+    </div>
+</div>
+
+
+{% endblock content %}

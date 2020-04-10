@@ -1,0 +1,1 @@
+web: gunicorn avinashvarpeti1.wsgi
