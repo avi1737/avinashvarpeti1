@@ -1,1 +1,1 @@
-web: gunicorn avinashvarpeti1.wsgi
+web: gunicorn avinashvarpeti1.wsgi --log-file -
