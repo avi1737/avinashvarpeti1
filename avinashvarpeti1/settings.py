@@ -126,7 +126,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATIC_PATH = os.path.join(BASE_DIR, 'static')
 
-STATIC_DIR = os.path.join(BASE_DIR,'portfolio/static',)
+STATIC_DIR = os.path.join(BASE_DIR,'portfolio/static','staticfiles')
 
 
 
