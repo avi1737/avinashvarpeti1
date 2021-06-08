@@ -24,7 +24,7 @@ mysql-connector==2.2.9
 mysqlclient==1.4.6
 numpy==1.17.3
 pandas==0.25.2
-Pillow==6.2.1
+Pillow==8.2.0
 pipenv==2018.11.26
 pop==10.1
 pop-config==5.2
